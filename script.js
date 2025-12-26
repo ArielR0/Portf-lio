@@ -94,3 +94,27 @@ document.querySelectorAll('nav a[href^="#"]').forEach(link => {
     });
   });
 });
+
+/* ===============================
+   Cards de Tecnologias
+   =============================== */
+
+   
+const techBars = document.querySelectorAll(".progresso");
+
+const techObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const nivel = entry.target.getAttribute("data-nivel");
+      entry.target.style.width = nivel;
+    }
+  });
+}, { threshold: 0.4 });
+
+techBars.forEach(bar => techObserver.observe(bar));
+
+
+
+
+
+
