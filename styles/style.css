@@ -160,6 +160,7 @@ body {
 .Projetos {
   padding: 100px 20px;
   text-align: center;
+  background: #0f172a;
 }
 
 .Projetos h2 {
@@ -517,6 +518,8 @@ body {
 /* ================================
    RESPONSIVO
 ================================ */
+
+
 @media (max-width: 768px) {
   .inicio-content {
     flex-direction: column;

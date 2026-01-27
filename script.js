@@ -70,9 +70,13 @@ const observer = new IntersectionObserver(entries => {
     if(entry.isIntersecting){
       entry.target.style.opacity = 1;
       entry.target.style.transform = "translateY(0)";
+      observer.unobserve(entry.target); 
     }
   });
-}, { threshold: 0.2 });
+}, {
+  threshold: 0.05,              
+  rootMargin: "0px 0px -100px 0px"
+});
 
 seções.forEach(seção => {
   seção.style.opacity = 0;
