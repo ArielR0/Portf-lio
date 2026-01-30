@@ -459,6 +459,103 @@ body {
 }
 
 
+/* =========================
+   AVALIAÇÕES
+========================= */
+.Avaliacoes {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #111e3f, #0d1424);
+  text-align: center;
+}
+
+.Avaliacoes h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.avaliacoes-desc {
+  color: #dddddd;
+  margin-bottom: 50px;
+}
+
+/* Grid */
+.avaliacoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card */
+.avaliacao-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* Avatar */
+.avaliacao-topo {
+  font-size: 32px;
+  background: #747373;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Balão */
+.avaliacao-balao {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Pontinha do balão */
+.avaliacao-balao::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  background: #fff;
+}
+
+/* Texto */
+.avaliacao-balao p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Estrelas */
+.avaliacao-estrelas {
+  margin-top: 15px;
+  color: #f5b301;
+}
+
+.avaliacao-estrelas i {
+  margin: 0 2px;
+}
+
+/* Nome da pessoa */
+.avaliacao-nome {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+
 /* ================================
    CONTATO
 ================================ */
@@ -528,6 +625,18 @@ body {
 
   .imagem img {
     width: 220px;
+  }
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
